@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Menú Lateral</title>
+    <link rel="stylesheet" href="../ESTILOS/home.css">
+</head>
+<body>
+    <div id="menu" class="sidebar">
+        <img id="img_menu" src="../utils/icons/menu.png" width="24px" height="24px" alt="Menú" class="menu-icon" onclick="toggleNav()" />
+        <h2>Menú</h2>
+        <ul>
+            <li id="modulo_especies" class="menu-item">
+                <img class="icons" src="../utils/icons/catalogo.png" width="24px" height="24px" alt="Catálogo de Especies" />
+                <span id="modulo_especie" >Catálogo de especies</span>
+            </li>
+            <li id="modulo_terrarios" class="menu-item">
+                <img class="icons" src="../utils/icons/terrario.png" width="24px" height="24px" alt="Terrarios" />
+                <a href="../administrador/terrario.html">Terrarios</a>
+            </li>
+            <li id="modulo_instructores" class="menu-item">
+                <img class="icons" src="../utils/icons/instructor.png" width="24px" height="24px" alt="Instructores" />
+                <a href="../administrador/AgregarInstructor.html">Instructores</a>
+            </li>
+            <li id="modulo_exposiciones" class="menu-item">
+                <img class="icons" src="../utils/icons/expo.png" width="24px" height="24px" alt="Instructores" />
+                <span id="modulo_exposicion" >Exposiciones</span>
+            </li>
+            <li id="modulo_curso" class="menu-item">
+                <img class="icons" src="../utils/icons/cursos.png" width="24px" height="24px" alt="Cursos" />
+                <a href="#">Cursos</a>
+            </li>
+           
+            <li id="modulo_logout" class="menu-item">
+                <img class="icons" src="../utils/icons/logout.png" width="24px" height="24px" alt="Cerrar Sesión" />
+                <button id="btnLogout">Cerrar sesión</button>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div id="content-main" class="main">
+        <h1>Bienvenido</h1>
+        <p>Selecciona una opción del menú para comenzar.</p>
+    </div>
+
+    <script src="../CONTROLADOR/funciones_usuarios_js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPOSICIONES | MESÓFILA</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+	<link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+	<link rel="stylesheet" href="../ESTILOS/especie.css">
+    <!-- Librer�a JQuery -->
+	<script src="../js_MESOFILA/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<!-- Contenedor Superior -->
+	<div id="contsuperior">
+		<header>
+			<div id="logotipo">
+				<a href="../Main.html"><img src="../utils/imagenes/logomesofila.png" alt="MES�FILA"></a>
+			</div>
+			<div id="usuario" style="text-align: right">
+			<ul>
+				<li><a href="../administrador/Login.html">Iniciar sesi&oacute;n</a></li>
+				<li><a href="../administrador/registrar_Usuario.html">Registrarse</a></li>
+			</ul>
+			</div><!-- Cierra Etiqueta Usuario -->
+		</header>
+		</div>
+
+		<div id="interior">
+			
+				<section id="contenido-reportes">
+					<article class="CR_inicio">
+					
+					<div class="search-container">
+						<input type="text" id="nombre" placeholder="Buscar por nombre...">
+						<h5><div class="mb-5"><button onclick="filterData()">BUSCAR</button></div></h5>
+					</div>
+		</div>
+
+		<!--Se llama a la tabla-->
+		<table id="resultsTable">
+			<thead>
+		
+			</thead>
+			<tbody id="results"></tbody>
+		</table>
+
+		<script src="../js_MESOFILA/Js_visitante/visitanteexposiciones.js"></script>
+
+	</div><!-- Cierra el contenedor contenido -->
+	<div id="coninterior">
+		<footer>
+			<article id="info">
+				<p>
+					Teléfono: 2722151403<br>
+					Redes sociales: <a href="https://www.youtube.com" target="_blank">Youtube</a><br>
+					Correo electrónico: acontrerascalvario@gmail.com<br>
+					Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+				</p>
+			</article>
+			<article id="autor">
+				<p>
+				    @Copyright 2024<br>
+					MESÓFILA PIMVS<br>
+				</p>
+			</article>
+		</footer>
+	</div><!-- Cierra el footer -->
+	<script src="../js_MESOFILA/JS_admin/registrar_exposicion.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesófila</title>
+    <link rel="stylesheet" href="estilos_MESOFILA/EstiloMain.css">
+    <link rel="stylesheet" href="estilos_MESOFILA/jquery.excoloSlider.css">
+    <!-- Librería JQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js_MESOFILA/jquery.excoloSlider.min.js"></script>
+</head>
+<body>
+    <div id="contsuperior">
+        <header>
+            <div id="logotipo">
+                <a href="Main.html"><img src="./utils/imagenes/logomesofila.png" alt="Logo de MESÓFILA"></a>
+            </div>
+            <div id="usuario">
+                <ul>
+                    <li><a href="./administrador/Login.html"><img class="icon" src="./utils/icons/usuario.png" alt="Iniciar Sesión"> Iniciar Sesi&oacute;n</a></li>
+                    <li><a href="./VISTA/registrar_usuario.html"><img class="icon" src="./utils/icons/registrar.png" alt="Registrarse"> Registrarse</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="#about_section">Quiénes Somos</a></li>
+            <li><a href="./Visitante/VistadeExposiciones.html">Exposiciones</a></li>
+            <li><a href="./Visitante/VistadeListaEspecies.html">Catálogo de Especies</a></li>
+            <li><a href="#location">Dónde Nos Ubicamos</a></li>
+        </ul>
+    </nav>
+
+    <main id="interior">
+        <section id="bienvenida">
+            <h1 class="luckiest-guy-regular">¡Bienvenidos a Mesófila!</h1>
+        </section>
+
+        <section id="slider">
+            <img src="./utils/imagenes/Carrusel1.jpg" alt="Imagen del carrusel 1">
+            <img src="./utils/imagenes/carrusel2.jpg" alt="Imagen del carrusel 2">
+            <img src="./utils/imagenes/carrusel3.jpg" alt="Imagen del carrusel 3">
+        </section>
+        <script>
+            $(function () {
+                $("#slider").excoloSlider({
+                    height: 320,
+                    mouseNav: true,
+                    touchNav: true,
+                    interval: 5000,
+                    playReverse: true
+                });
+            });
+        </script>
+
+        <!-- About Section -->
+        <section id="about_section">
+            <div class="container">
+                <div class="about_content">
+                    <div class="about_image">
+                        <img src="./utils/imagenes/especie.png" alt="">
+                    </div>
+                    <div class="about_text">
+                        <h2 class="custom_heading">
+                            Sobre 
+                            <span>nosotros</span>
+                        </h2>
+                        <p>
+                             MESOFILA es un PIMVS (Predio o Instalación que Maneja Vida Silvestre) es un espacio especializado
+                             donde se maneja y conserva la vida silvestre en condiciones controladas, fuera de su hábitat natural.
+                              Nuestro objetivo es fomentar la reproducción responsable y sostenible de diversas especies, 
+                              contribuyendo a su preservación y aprovechamiento.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- Service Section -->
+        <section class="service_section">
+            <div class="container">
+                <div class="custom_heading-container">
+                    <h2 class="custom_heading">
+                        Nuestros 
+                        <span>Objetivos</span>
+                    </h2>
+                </div>
+                <div class="service_content">
+                    <div class="service_box">
+                        <div class="img_box">
+                            <img src="./utils/icons/cautiverio.png" alt="Service 1">
+                        </div>
+                        <div class="detail_box">
+                            <h6>Conservación y cría responsable</h6>
+                            <p>
+                                Mantener, reproducir y criar especies en cautividad para
+                                 un desarrollo digno y sostenible.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service_box">
+                        <div class="img_box">
+                            <img src="./utils/icons/divulgacion.png" alt="Service 2">
+                        </div>
+                        <div class="detail_box">
+                            <h6>Educación ambiental y divulgación científica</h6>
+                            <p>
+                                Ofrecer educación y divulgación ambiental a escuelas y 
+                                comunidades mediante diversos medios.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service_box">
+                        <div class="img_box">
+                            <img src="./utils/icons/veterinario.png" alt="Service 3">
+                        </div>
+                        <div class="detail_box">
+                            <h6>Rescate y rehabilitación de fauna silvestre</h6>
+                            <p>
+                                Rescatar, rehabilitar y cuidar especies de fauna silvestre
+                                 con atención veterinaria.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service_box">
+                        <div class="img_box">
+                            <img src="./utils/icons/lagarto.png" alt="Service 4">
+                        </div>
+                        <div class="detail_box">
+                            <h6>Investigación Científica en Herpetofauna</h6>
+                            <p>
+                                Contribuir a la investigación para ampliar 
+                                el conocimiento sobre la herpetofauna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Service Section -->
+
+        <!-- Location Section -->
+        <section class="location_section" id="location">
+            <div class="container">
+                <div class="custom_heading-container">
+                    <h2 class="custom_heading">
+                        Ven a
+                        <span>Conocernos</span>
+                    </h2>
+                </div>
+                <div class="location_content">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.235158084696!2d144.95373631584426!3d-37.81627967975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43bf8db971%3A0xb1a99da5996f0d18!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1572594793011!5m2!1sen!2sau" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+    </main>
+
+            <footer>
+                <article id="info">
+                    <p>
+                        Teléfono: 2722151403<br>
+                        Correo electrónico: acontrerascalvario@gmail.com<br>
+                        Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+                    </p>
+                </article>
+                <article id="autor">
+                    <p>
+                        @Copyright 2024<br>
+                        M55 PS<br>
+                    </p>
+                </article>
+            </footer>
+        </div>
+        <!-- Cierra el footer -->

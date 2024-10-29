@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Especies</title>
+    <link rel="stylesheet" href="../ESTILOS/especie.css">
+    <link rel="stylesheet" href="../ESTILOS/text-input.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="nombre" placeholder="Buscar por nombre...">
+        <button onclick="filterData()">Buscar</button>
+    </div>
+    <div class="actions-container">
+        <button id="btnAdd" class="element" onclick="showAddForm()">Agregar Especie</button>
+        <button class="element" id= "buttonDelete" style="display: none;">Borrar especies</button>
+
+    </div>
+    
+    <table id="resultsTable">
+        <thead>
+            <tr>
+            
+                <!-- Las cabeceras de las demás columnas se generan dinámicamente -->
+            </tr>
+        </thead>
+        <tbody id="results"></tbody>
+    </table>
+    <!-- Modal Dialog -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideForm()">&times;</span>
+            <form id="especieForm">
+                <input type="hidden" id="formIndex" class="input-field">
+                <div class="input-container">
+                    <input type="text" id="nombre_comun" class="input-field">
+                    <label for="nombre_comun" class="input-label">Nombre Común:</label>   
+                </div>
+                <br>
+                <div class="input-container">
+                    <input type="text" id="nombre_cientifico" class="input-field">
+                    <label for="nombre_cientifico" class="input-label">Nombre Científico:</label>
+                </div>
+                <br>
+                <div class="input-container">
+                    <input type="text" id="ubicacion" class="input-field">
+                    <label for="ubicacion" class="input-label">Ubicación:</label>
+                </div>
+                <br>
+                <div class="input-container">
+                    <input type="checkbox" id="venenosa" class="input-field">
+                    <label for="venenosa" class="input-label">Venenosa:</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="descripcion" class="input-field">
+                    <label for="descripcion" class="input-label">Descripción:</label>
+                </div>
+                <br>
+                <div class="input-container">
+                    <input type="text" id="id_terrario" class="input-field">
+                    <label for="id_terrario" class="input-label">ID Terrario:</label>
+                </div>
+                <br/>
+                <div class="input-container">
+                    <input type="text" id="edad" class="input-field">
+                    <label for="edad" class="input-label">Edad:</label>
+                </div>
+                <br/>
+                <div class="input-container">
+                    <input type="text" id="comportamiento" class="input-field">
+                    <label for="comportamiento" class="input-label">Comportamiento:</label>
+                </div>
+                <br/>
+                <div class="input-container">
+                    <input type="text" id="tipo_alimentacion" class="input-field">
+                    <label for="tipo_alimentacion" class="input-label">Tipo de Alimentación:</label>
+                </div>
+                <br>
+                <button id="btn-negative" type="button" onclick="hideForm()">Cancelar</button>
+                <button id="btn-positive" type="button" onclick="saveEspecie()">Guardar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="../js_MESOFILA/JS_admin/Funcion_Admin_Especies.js"></script>
+
+   <!-- <script src="../CONTROLADOR/funciones_usuarios_js/funcion_especie.js"></script> AUXILIO JEZ -->
+</body>
+</html>
