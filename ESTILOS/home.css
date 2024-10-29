@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+a {
+    display: inline;
+}
+
+#img_menu {
+    position: fixed;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    z-index: 1;
+}
+
+.icons {
+    padding-right: 10px;
+    color: #004103;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #004103;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #A5D6A7;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Esto hace que los enlaces sean bloques, ocupando todo el ancho del contenedor */
+}
+
+
+.sidebar ul li a:hover {
+    background-color: #004103;
+}
+
+#modulo_logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnLogout {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#btnLogout img {
+    margin-right: 8px;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    background-image: url('../utils/imagenes/bannerblanco.jpg');
+}

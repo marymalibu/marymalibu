@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN | MESÓFILA</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+	<link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+	<link rel="stylesheet" href="../ESTILOS/login.css">
+    <!-- Librería JQuery -->
+	<script src="../js_MESOFILA/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+   
+	
+
+	
+    <div id="interior">	
+	    <section id="contenido-reportes">
+		<article class="CR_inicio">
+		
+        <div class="login-container">
+        <h3>INICIAR SESIÓN</h3>
+        <form id="loginForm">
+            <h5><div class="input-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="user_name" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <button id ="loginButton" type="submit">Iniciar Sesión</button>
+
+            </div>
+            <a href="./registrar_usuario.html"> No eres usuario, registrate.
+
+            </a>
+        </form>
+    </div>
+    <script src="../CONTROLADOR/funciones_usuarios_js/login_user.js"></script>
+</body>
+</html>

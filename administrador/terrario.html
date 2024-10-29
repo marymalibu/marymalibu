@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Terrario | Mesófila</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+    <link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+    <link rel="stylesheet" href="../ESTILOS/especie.css">
+    <!-- Librería JQuery -->
+    <script src="../js_MESOFILA/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <!-- Contenedor Superior -->
+    <div id="contsuperior">
+        <header>
+            <div id="logotipo">
+                <a href="../Main.html"><img src="../utils/imagenes/logomesofila.png" alt="Mesófila"></a>
+            </div>
+            <div id="usuario" style="text-align: right;">
+                <ul>
+                    <li><a href="../administrador/Login.html">Iniciar sesión</a></li>
+                    <li><a href="../administrador/registrar_Usuario.html">Registrarse</a></li>
+                </ul>
+            </div><!-- Cierra Etiqueta Usuario -->
+        </header>
+    </div><!-- Cierra Div Contenedor Superior -->
+    
+    <div id="interior">
+        <section id="contenido-reportes">
+            <article class="CR_inicio">
+                <div class="search-container">
+                    <input type="text" id="nombre" placeholder="Buscar por marcaje...">
+                    <div class="mb-5">
+                        <button onclick="filterData()">Buscar</button>
+                    </div>
+                </div>
+                <div class="actions-container">
+                    <div class="mb-5">
+                        <button onclick="showAddForm()">Agregar terrario</button>
+                    </div>
+                    <button id="buttonDelete" style="display: none;" onclick="confirmDelete()">Borrar Terrario</button>
+                </div>
+        
+                <table id="resultsTable">
+                    <thead>
+                        <!-- Aquí puedes agregar los títulos de las columnas -->
+                    </thead>
+                    <tbody id="results"></tbody>
+                </table>
+        
+                <!-- Modal Dialog -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="hideForm()">&times;</span>
+                        <form id="terrariosForm">
+                            <input type="hidden" id="formIndex">
+
+                            <label for="dimensiones">Dimensiones:</label>
+                            <input type="text" id="dimensiones" required><br>
+                            
+                            <label for="peso">Peso:</label>
+                            <input type="text" id="peso" required><br>
+                            
+                            <label for="material">Material:</label>
+                            <input type="text" id="material" required><br>
+                            
+                            <label for="marcaje">Marcaje:</label>
+                            <input type="text" id="marcaje" required><br>
+                            
+                            <label for="temperatura">Temperatura:</label>
+                            <input type="text" id="temperatura" required><br>
+                            
+                            <button type="button" onclick="saveTerrario()">Guardar</button>
+                            <button type="button" onclick="hideForm()">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <script src="../js_MESOFILA/JS_admin/registrar_terrario.js"></script>
+            </article>
+        </section><!-- Cierra Section Contenedor Contenido -->
+    </div><!-- Cierra el contenedor contenido -->
+
+    <div id="coninterior">
+        <footer>
+            <article id="info">
+                <p>
+                    Teléfono: 2722151403<br>
+                    Redes sociales: <a href="https://www.youtube.com" target="_blank">YouTube</a><br>
+                    Correo electrónico: acontrerascalvario@gmail.com<br>
+                    Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+                </p>
+            </article>
+            <article id="autor">
+                <p>
+                    &copy; 2024<br>
+                    Mesófila PIMVS<br>
+                </p>
+            </article>
+        </footer>
+    </div><!-- Cierra el footer -->
+
+</body>
+</html>

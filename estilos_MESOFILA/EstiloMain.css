@@ -1,0 +1,273 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Luckiest Guy', cursive;
+    background-image: url('../utils/imagenes/bannerblanco.jpg');
+    color: #3b2009;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-image: url('../utils/imagenes/header.jpg');
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logotipo img {
+    width: 80px; /* Tamaño del logotipo */
+    height: auto;
+}
+
+#usuario {
+    display: flex;
+    align-items: center;
+}
+
+#usuario ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+#usuario ul li {
+    display: flex;
+    align-items: center;
+}
+
+#usuario ul li a {
+    color: #3b2009;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#usuario ul li a:hover {
+    color: #A5D6A7;
+}
+
+#usuario ul li a .icon {
+    width: 20px;
+    height: auto;
+}
+
+/* Nav */
+nav {
+    width: 100%;
+    background-color: #236e06fa;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #A5D6A7;
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+main #bienvenida {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main #slider {
+    margin: 20px 0;
+}
+
+/* About Section */
+.about_section {
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about_image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.about_text {
+    max-width: 600px;
+}
+
+.custom_heading {
+    font-size: 2.5em;
+    color: #236e06fa;
+}
+
+.custom_heading span {
+    color: #3b2009;
+}
+
+.about_text p {
+    margin: 25px 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+/* Service Section */
+.service_section {
+    padding: 50px 0;
+    background-color: #236e0600;
+}
+
+.custom_heading-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.custom_heading-container h2 {
+    font-size: 2.5em;
+    color: #236e06fa;
+}
+
+.custom_heading-container span {
+    color: #3b2009;
+}
+
+.service_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service_box {
+    background-color: #236e0600;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.img_box {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #794516fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.img_box img {
+    width: 45px;
+}
+
+.detail_box h6 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #080203;
+}
+
+.detail_box p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Location Section */
+.location_section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.location_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.location_text {
+    max-width: 600px;
+}
+
+.custom_heading {
+    font-size: 2.5em;
+    color: #236e06fa;
+}
+
+.custom_heading span {
+    color: #3b2009;
+}
+
+.location_text p {
+    margin: 25px 0;
+    font-size: 1em;
+    color: #3b2009;
+}
+
+/* Footer */
+footer {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url('../utils/imagenes/footer.jpg');
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #A5D6A7;
+}
+
+#info {
+    margin-bottom: 10px;
+}
+
+#info p {
+    margin-bottom: 10px;
+}
+
+#autor {
+    font-size: 14px;
+}

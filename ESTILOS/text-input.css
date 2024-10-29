@@ -1,0 +1,57 @@
+/* Container for the input and label */
+.input-container {
+    position: relative;
+    align-items: center;
+    
+}
+
+/* Input field styling */
+.input-field {
+    width: max-content;
+    min-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Label styling */
+.input-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: white;
+    color: #aaa;
+    font-size: 16px;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+#btn-positive {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#btn-negative {
+    background-color: #aaa;
+    color: black;
+    font-weight: bold;
+}
+
+/* When the input is focused or has value */
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+/* Input field focused state */
+.input-field:focus {
+    border-color: #007BFF;
+}

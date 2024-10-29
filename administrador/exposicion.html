@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Exposición | MESÓFILA</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+    <link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+    <link rel="stylesheet" href="../ESTILOS/especie.css">
+    <!-- Librería JQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <!-- Contenedor Superior -->
+    <div id="contsuperior">
+        <header>
+            <div id="logotipo">
+                <a href="../Main.html"><img src="../utils/imagenes/logomesofila.png" alt="MESÓFILA"></a>
+            </div>
+            <div id="usuario" style="text-align: right;">
+                <ul>
+                    <li><a href="../administrador/Login.html">Iniciar sesión</a></li>
+                    <li><a href="../administrador/registrar_Usuario.html">Registrarse</a></li>
+                </ul>
+            </div><!-- Cierra Etiqueta Usuario -->
+        </header>
+    </div><!-- Cierra Div Contenedor Superior -->
+    
+    <div id="interior">
+        <section id="contenido-reportes">
+            <article class="CR_inicio">
+                <div class="search-container">
+                    <input type="text" id="buscar_nombre_exposicion" placeholder="Buscar por nombre...">
+                    <div class="mb-5">
+                        <button onclick="filterData()">Buscar</button>
+                    </div>
+                </div>
+                <div class="actions-container">
+                    <div class="mb-5">
+                        <button onclick="showAddForm()">Agregar exposición</button>
+                    </div>
+                    <button id="buttonDelete" style="display: none;" onclick="confirmDelete()">Borrar Exposición</button>
+                </div>
+        
+                <table id="results">
+                    <thead>
+                        <tr>
+                            <!-- Las cabeceras de las demás columnas se generan dinámicamente -->
+                        </tr>
+                    </thead>
+                    <tbody id="results-body"></tbody> <!-- Cambiado el ID para evitar duplicados -->
+                </table>
+        
+                <!-- Modal Dialog -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="hideForm()" tabindex="0">&times;</span>
+                        <form id="exposicionForm">
+                            <input type="hidden" id="formIndex">
+
+                            <label for="nombre_exposicion">Nombre de la exposición:</label>
+                            <input type="text" id="nombre_exposicion_form" required><br> <!-- Cambiado ID para evitar conflicto -->
+                            
+                            <label for="descripcion">Descripción del tema:</label>
+                            <input type="text" id="descripcion" required><br>
+                            
+                            <label for="hora">Hora de inicio:</label>
+                            <input type="time" id="hora" required><br> <!-- Usando input type="time" para mejor UX -->
+                            
+                            <label for="fecha">Fecha de la exposición:</label>
+                            <input type="date" id="fecha" required><br> <!-- Usando input type="date" para mejor UX -->
+                            
+                            <label for="id_instructor_fk">ID instructor:</label>
+                            <input type="text" id="id_instructor_fk" name="id_instructor_fk" required> <!-- Añadido "required" para validación -->
+                            
+                            <button type="button" onclick="saveExposicion()">Guardar</button>
+                            <button type="button" onclick="hideForm()">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <script src="../js_MESOFILA/JS_admin/registrar_exposicion.js"></script>
+            </article>
+        </section><!-- Cierra Section Contenedor Contenido -->
+    </div><!-- Cierra el contenedor contenido -->
+    
+    <div id="coninterior">
+        <footer>
+            <article id="info">
+                <p>
+                    Teléfono: 2722151403<br>
+                    Redes sociales: <a href="https://www.youtube.com" target="_blank">YouTube</a><br>
+                    Correo electrónico: acontrerascalvario@gmail.com<br>
+                    Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+                </p>
+            </article>
+            <article id="autor">
+                <p>
+                    &copy; 2024<br>
+                    Mesófila PIMVS<br>
+                </p>
+            </article>
+        </footer>
+    </div><!-- Cierra el footer -->
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Instructor | MESÓFILA</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+    <link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+    <link rel="stylesheet" href="../ESTILOS/especie.css">
+    <!-- Librería JQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js_MESOFILA/jquery.min.js"></script>
+</head>
+<body>
+    <div id="contsuperior">
+        <header>
+            <div id="logotipo">
+                <a href="../Main.html"><img src="../utils/imagenes/logomesofila.png" alt="MESÓFILA"></a>
+            </div>
+            <div id="usuario" style="text-align: right;">
+                <ul>
+                    <li><a href="../administrador/Login.html">Iniciar sesión</a></li>
+                    <li><a href="../administrador/registrar_Usuario.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    
+    <div id="interior">
+        <section id="contenido-reportes">
+            <article class="CR_inicio">
+                <div class="search-container">
+                    <input type="text" id="nombre" placeholder="Buscar por nombre...">
+                    <div class="mb-5">
+                        <button onclick="filterData()">Buscar</button>
+                    </div>
+                </div>
+                <div class="actions-container">
+                    <div class="mb-5">
+                        <button onclick="showAddForm()">Agregar instructor</button>
+                    </div>
+                    <button id="buttonDelete" style="display: none;" onclick="confirmDelete()">Borrar Instructor</button>
+                </div>
+        
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <!-- Las cabeceras de las demás columnas se generan dinámicamente -->
+                        </tr>
+                    </thead>
+                    <tbody id="results"></tbody>
+                </table>
+        
+                <!-- Modal Dialog -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="hideForm()">&times;</span>
+                        <form id="instructorForm">
+                            <input type="text" id="telefono" placeholder="Teléfono" />
+                            <input type="text" id="cargo" placeholder="Cargo" />
+                            <input type="text" id="id_usuario_fk" placeholder="ID Usuario" />
+                            <button type="button" onclick="saveInstructores()">Guardar</button>
+                        </form>
+                        
+                            <button type="button" onclick="hideForm()">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    
+    <div id="coninterior">
+        <footer>
+            <article id="info">
+                <p>
+                    Teléfono: 2722151403<br>
+                    Redes sociales: <a href="https://www.youtube.com" target="_blank">YouTube</a><br>
+                    Correo electrónico: acontrerascalvario@gmail.com<br>
+                    Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+                </p>
+            </article>
+            <article id="autor">
+                <p>
+                    &copy; 2024<br>
+                    Mesófila PIMVS<br>
+                </p>
+            </article>
+        </footer>
+    </div>
+    
+    <!-- Archivo JavaScript -->
+    <script src="../js_MESOFILA/JS_admin/registrar_instructores.js"></script>
+</body>
+</html>

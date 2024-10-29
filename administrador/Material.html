@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGREGAR MATERIAL | MESÓFILA</title>
+    <link rel="stylesheet" href="../estilos_MESOFILA/EstiloMain.css">
+	<link rel="stylesheet" href="../estilos_MESOFILA/jquery.excoloSlider.css">
+	<link rel="stylesheet" href="../ESTILOS/especie.css">
+    <!-- Librería JQuery -->
+	<script src="../js_MESOFILA/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<!-- Contenedor Superior -->
+	<div id="contsuperior">
+		<header>
+			<div id="logotipo">
+				<a href="../Main.html"><img src="../utils/imagenes/logomesofila.png" alt="MESÓFILA"></a>
+			</div>
+			<div id="usuario" style="text-align: right">
+			<ul>
+				<li><a href="../administrador/Login.html">INICIAR SESIÓN</a></li>
+				<li><a href="../administrador/registrar_Usuario.html">REGISTRARSE</a></li>
+			</ul>
+			</div><!-- Cierra Etiqueta Usuario -->
+		</header>
+	</div><!-- Cierra Div Contenedor Superior -->
+	
+	<div id="interior">
+	    <section id="contenido-reportes">
+		<article class="CR_inicio">
+	
+		<div class="search-container">
+			<input type="text" id="nombre" placeholder="Buscar por nombre...">
+			<h5><div class="mb-5"><button onclick="filterData()">BUSCAR</button></div></h5>
+		</div>
+		<div class="actions-container">
+			<h5><div class="mb-5"><button onclick="showAddForm()">AGREGAR MATERIAL</button></div></h5>
+			<button id= "buttonDelete" style="display: none;">Borrar Material</button>	
+		</div>
+		
+		<table id="resultsTable">
+			<thead>
+			
+			</thead>
+			<tbody id="results"></tbody>
+		</table>
+		
+		<!-- Modal Dialog -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="hideForm()">&times;</span>
+				<form id="materialForm">
+					<input type="hidden" id="formIndex">
+					<label for="nombre_material">Nombre del material:</label><input type="text" id="nombre_material"><br>
+					<label for="descripcion">Descripción del Material:</label><input type="text" id="descripcion"><br>
+					<label for="url">Link del material:</label><input type="text" id="url"><br>
+					<button type="button" onclick="saveMaterial()">Guardar</button>
+					<button type="button" onclick="hideForm()">Cancelar</button>
+
+				</form>
+			</div>
+		</div>
+	
+		<script src="../js_MESOFILA/JS_admin/registrar_material.js"></script>
+
+        </article>
+		</section><!-- Cierra Section Contenedor Contenido -->
+	</div><!-- Cierra el contenedor contenido -->
+
+	<div id="coninterior">
+		<footer>
+			<article id="info">
+				<p>
+					Teléfono: 2722151403<br>
+					Redes sociales: <a href="https://www.youtube.com" target="_blank">Youtube</a><br>
+					Correo electrónico: acontrerascalvario@gmail.com<br>
+					Dirección: Avenida Benito Juárez #311, Colonia Centro, 94740
+				</p>
+			</article>
+			<article id="autor">
+				<p>
+				    @Copyright 2024<br>
+					MESÓFILA PIMVS<br>
+				</p>
+			</article>
+		</footer>
+	</div><!-- Cierra el footer -->
+
+</body>
+</html>
